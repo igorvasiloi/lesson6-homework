@@ -1,49 +1,67 @@
+<!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="SkillUP Homework 6" />
+    <meta name="keywords" content="HTML form, HTML meta tag, CSS" />
+    <meta name="author" content="Dionis Condurache" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
 
-<head>
-    <title>Meta tag homework</title>
-    <meta charset="UTF-8">
-    <meta name="description" content="SkillUP homework lesson 6">
-    <meta name="description" content="Meta lesson">
-    <meta name="keywords" content="HTML form, HTML meta tag, CSS">
-    <meta name="author" content="Igor Vasiloi">
-    <meta name="viewport" content="wdth=device width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
+  <body>
+    <form action="/action_page.php" class="form-group">
+      <div class="form-field">
+        <label for="firstname">Your Name (required)</label>
+        <input id="firstname" name="firstname" type="text" required />
+      </div>
 
-<body>
+      <div class="form-field">
+        <label for="email">Your Email (required)</label>
+        <input id="email" name="email" type="email" required />
+      </div>
 
-    <section>
-     <form action="path/to/server/" method="post">
-            
-            <label for="firstname">Your name</label>
-            <input id="firstname" type="text" name="first">
+      <fieldset class="form-field">
+        <legend>What's all about?</legend>
+        <div>
+          <input id="bike" type="checkbox" name="bike" />
+          <label for="bike"> Say Hello</label>
+        </div>
 
-            <label for="email">email</label>
-            <input id="email" type="email" name="email">
+        <div>
+          <input id="car" type="checkbox" name="car" />
+          <label for="car"> Complain</label>
+        </div>
 
-            <input type="checkbox" name="check1" value="Say hello">Say hello
-            <br>
-            <input type="checkbox" name="check2" value="Complain">Complain
-            <br>
-            <input type="checkbox" name="check3" value="Share a joke">Share a joke
-            <br><br>
-            <p>Subject</p>
-            <select name="Age">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-            </select>
-            <br><br>
+        <div>
+          <input id="boat" type="checkbox" name="boat" checked />
+          <label for="boat"> Share a joke</label>
+        </div>
+      </fieldset>
 
-            <label for="comment">your message</label>
-            <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
-            <br><br>
-            <input type="submit" value="SEND">
-        </form>
+      <div class="form-field">
+        <label for="subject">Please select your car</label>
+        <select id="subject" name="subject">
+          <optgroup label="Europe">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="opel">Opel</option>
+            <option value="audi">Audi</option>
+          </optgroup>
+          <optgroup label="Japan">
+            <option value="toyota">Toyouta</option>
+            <option value="lexus">Lexus</option>
+            <option value="honda">Honda</option>
+          </optgroup>
+        </select>
+      </div>
 
-    </section>
-</body>
+      <div class="form-field">
+        <label for="comment">Your message:</label>
+        <textarea id="comment" name="comment"></textarea>
+      </div>
 
+      <input type="submit" />
+    </form>
+  </body>
 </html>
